@@ -34,7 +34,7 @@ class PrimeNumbersTable
   def generate_table
     table = []
     table << create_row(@prime_numbers.unshift("X")) # create table header
-    @table_body.each_with_index do |row, i|
+    @table_body.each do |row|
       table << create_row(row)
     end
     table.join("\n")
