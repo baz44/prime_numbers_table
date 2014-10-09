@@ -16,7 +16,7 @@ class PrimeNumbersTable
     prime_numbers = []
     while prime_numbers.length < n
       prime_numbers << number if is_prime?(number)
-      number += 1
+      number += (number.even? ? 1 : 2)
     end
     prime_numbers
   end
