@@ -1,0 +1,6 @@
+#! /usr/bin/ruby
+$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib')
+require 'prime_numbers_table'
+
+numbers = ARGV[0] || 10
+puts PrimeNumbersTable.new(numbers.to_i).print_table
