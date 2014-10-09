@@ -6,5 +6,5 @@ numbers = (ARGV[0] || 10).to_i
 if numbers > 0
   puts PrimeNumbersTable.new(numbers).print_table
 else
-  puts "Number of prime numbers should greater than 0."
+  puts "Number of prime numbers should be greater than 0."
 end
