@@ -2,5 +2,9 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib')
 require 'prime_numbers_table'
 
-numbers = ARGV[0] || 10
-puts PrimeNumbersTable.new(numbers.to_i).print_table
+numbers = (ARGV[0] || 10).to_i
+if numbers > 0
+  puts PrimeNumbersTable.new(numbers).print_table
+else
+  puts "Number of prime numbers should greater than 0."
+end

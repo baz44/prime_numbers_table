@@ -22,6 +22,10 @@ describe PrimeNumbersTable do
 doc
       expect(@prime_numbers_table.print_table).to eql(table.chomp)
     end
+
+    it "should return an error message if no primary numbers found" do
+      expect(PrimeNumbersTable.new(0).print_table).to eql("No Prime numbers found.")
+    end
   end
 
   describe "#is_prime?" do

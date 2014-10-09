@@ -6,6 +6,7 @@ class PrimeNumbersTable
 
   def print_table
     @prime_numbers  = generate_prime_numbers(@numbers)
+    return "No Prime numbers found." if @prime_numbers.empty?
     @table_body     = generate_table_body
     @columns_widths = get_columns_widths
     generate_table
